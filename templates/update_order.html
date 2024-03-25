@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=brave">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Track and Trace order </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_order.css') }}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a class="active" href="/">Main Screen</a></li>
+        <li><a href="/trackandtrace">Add Track and Trace Order</a></li>
+        <li><a href="/add_order">Add Order</a></li>
+        <li><a href="/update_order">Update Order</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/logout">Log out</a></li>
+    </ul>
+</nav>
+<form action="/update_order" method="post">
+    <div class="content" >
+        <div class="input-box">
+            <input class="form-control mx-auto w-auto" id="order_number_for_user" name="order_number_for_user" placeholder="Order number" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Delete order</button>
+    </div>
+</form>
+</body>
+</html>

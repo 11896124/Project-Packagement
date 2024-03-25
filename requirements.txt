@@ -1,0 +1,8 @@
+Flask
+Flask-Session
+Flask-SQLAlchemy
+psycopg2-binary
+SQLAlchemy
+requests
+werkzeug.security
+dateutil

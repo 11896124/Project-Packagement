@@ -1,0 +1,76 @@
+
+/* background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('gradient-network-connection-background/5079835.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navigation bar */
+body{
+    margin: 0px;
+}
+main{
+    margin-left:20px;
+    margin-right:20px;
+}
+
+h1{
+    text-align: center;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+
+}
+
+.navbar a:hover{
+
+    background-color: hsl(0, 0%, 10%);
+}
+
+.navbar li{
+    float: left;
+}
+
+.main_message{
+    background-color: blue;
+}
+
+/* input content div */
+.content {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);  
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

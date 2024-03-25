@@ -1,0 +1,156 @@
+/* Navigation bar */
+body{
+    margin: 0px;
+}
+main{
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding-bottom: 20px;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+
+}
+
+.navbar a:hover{
+
+    background-color: hsl(0, 0%, 10%);
+}
+
+.navbar li{
+    float: left;
+}
+
+.main_message{
+    margin-top: 200px;
+    background-color: hsl(0, 0%, 25%);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 20px auto;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+
+/* these styles for the lists have been partially generated with Chatgpt */
+/* Styles for .lists container */
+.lists {
+    overflow: hidden; /* Clear floats */
+}
+
+/* Styles for the .not_sent column */
+.lists .not_sent {
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: black;
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 15px; /* Optional: Add padding for better spacing */
+    background-color: #ffcccc; /* Example background color for .not_sent */
+}
+
+/* Styles for the .in_transition column */
+.lists .in_transition {
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: black;
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 15px; /* Optional: Add padding for better spacing */
+    background-color: #e6ccff; /* Example background color for .in_transition */
+}
+
+/* Styles for the .delivered column */
+.lists .delivered {
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: black;
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 15px; /* Optional: Add padding for better spacing */
+    background-color: #ccccff; /* Example background color for .delivered */
+}
+
+/* Clear floats after the columns */
+.lists::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ul{
+    border: 5px;
+    padding-left: 20px;
+    padding: 5px;
+}
+
+.lists h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.lists h2 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.lists .order-item {
+    border-radius: 8px;
+    margin-bottom: 10px; 
+    overflow: hidden;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('gradient-network-connection-background/5079835.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}

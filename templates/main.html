@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_main.css') }}">
+    <title>Orders</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a class="active" href="/">Main Screen</a></li>
+            <li><a href="/trackandtrace">Add Track and Trace Order</a></li>
+            <li><a href="/add_order">Add Order</a></li>
+            <li><a href="/update_order">Update Order</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/logout">Log out</a></li>
+        </ul>
+    </nav>
+<main>
+    <div class="main_message">
+        Hello {{ user.username|capitalize }}! Welcome to Packagement.
+        {% if number_of_orders < 1 %}
+            You have no orders!
+        {% elif number_of_orders == 1 %}
+            You have 1 order in total!
+            Here it is:
+        {% else %}
+            You have a total of {{ number_of_orders }} orders.
+            Here they are:
+    </div>
+    {% endif %}
+    <div class="lists">
+        <div class="columns">
+            <div class="not_sent">
+                <h2>Not Sent</h2>
+                    {% for order in not_sent_list %}
+                    <ul class="order-item">
+                            <p>{{ order.order_number_for_user }} : {{ order.order_name }}</p>
+                            <p>Postal service: {{ order.postal_service }}</p>
+                            <p>Order barcode: {{order.barcode}}</p>
+                            <p>Order postal code: {{order.postal_code}}</p>
+                            <p>Arrival date: {{ order.date_arrival }}</p>
+                            <p>Creation date: {{ order.date_created }}</p>
+                    </ul>
+                    {% endfor %}
+            </div>
+            <div class="in_transition">
+                <h2>In Transition</h2>
+                {% for order in in_transition_list %}
+                    <ul class="order-item">
+                        <p>{{ order.order_number_for_user }} : {{ order.order_name }}</p>
+                        <p>Postal service: {{ order.postal_service }}</p>
+                        <p>Order barcode: {{order.barcode}}</p>
+                        <p>Order postal code: {{order.postal_code}}</p>
+                        <p>Arrival date: {{ order.date_arrival }}</p>
+                        <p>Creation date: {{ order.date_created }}</p>
+                    </ul>
+                {% endfor %}
+            </div>
+            <div class="delivered">
+                <h2>Delivered</h2>
+                    {% for order in delivered_list %}
+                    <ul class="order-item">
+                        <p>{{ order.order_number_for_user }} : {{ order.order_name }}</p>
+                        <p>Postal service: {{ order.postal_service }}</p>
+                        <p>Order barcode: {{order.barcode}}</p>
+                        <p>Order postal code: {{order.postal_code}}</p>
+                        <p>Arrival date: {{ order.date_arrival }}</p>
+                        <p>Creation date: {{ order.date_created }}</p>
+                    </ul>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

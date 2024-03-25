@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=brave">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Track and Trace order </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_order.css') }}">
+</head>
+<nav class="navbar">
+    <ul>
+        <li><a class="active" href="/">Main Screen</a></li>
+        <li><a href="/trackandtrace">Add Track and Trace Order</a></li>
+        <li><a href="/add_order">Add Order</a></li>
+        <li><a href="/update_order">Update Order</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/logout">Log out</a></li>
+    </ul>
+</nav>
+<body>
+<div class="content">
+    <form action="/trackandtrace" method="post">
+        <div>
+            <label for="PostNl">PostNL:</label>
+            <input value = "PostNL" autocomplete="off" 
+            autofocus class="form-control mx-auto w-auto" 
+            id="postal_company_PostNL" 
+            name="postal_company" placeholder="postal_company" type="radio">
+        </div>
+        <div>
+            <label for="DHL">DHL:</label>
+            <input value = "DHL" autocomplete="off" 
+            autofocus class="form-control mx-auto w-auto" 
+            id="postal_company_DHL" 
+            name="postal_company" placeholder="postal_company" type="radio">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="barcode" name="barcode" placeholder="Barcode" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="postal_code" name="postal_code" placeholder="Postal code" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="order_name" name="order_name" placeholder="Order name" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Give input</button>
+    </form>
+</div>
+</body>
+</html>

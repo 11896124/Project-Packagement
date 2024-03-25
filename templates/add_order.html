@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=brave">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Track and Trace order </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_order.css') }}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<nav class="navbar">
+    <ul>
+        <li><a class="active" href="/">Main Screen</a></li>
+        <li><a href="/trackandtrace">Add Track and Trace Order</a></li>
+        <li><a href="/add_order">Add Order</a></li>
+        <li><a href="/update_order">Update Order</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/logout">Log out</a></li>
+    </ul>
+
+</nav>
+
+<div class="content">
+    <form action="/add_order" method="post">
+        <div class="input-box">
+            <label for="not_sent">Not sent:</label>
+            <input value = "not sent" autocomplete="off" autofocus class="form-control mx-auto w-auto" id="order_status" name="order_status" placeholder="Order status" type="radio">
+        </div>
+        <div class="input-box">
+            <label for="in_transition">In transition:</label>
+            <input value = "in transition" autocomplete="off" autofocus class="form-control mx-auto w-auto" id="order_status" name="order_status" placeholder="Order status" type="radio">
+        </div>
+        <div class="input-box">
+            <label for="delivered">Delivered:</label>
+            <input value = "delivered" autocomplete="off" autofocus class="form-control mx-auto w-auto" id="order_status" name="order_status" placeholder="Order status" type="radio">
+        </div>
+        <div class="input-box">
+            <input class="form-control mx-auto w-auto" id="date_arrival" name="date_arrival" placeholder="Date of arrival" type="datetime-local">
+        </div>
+        <div class="input-box">
+            <input class="form-control mx-auto w-auto" id="postal_service" name="postal_service" placeholder="Postal Service" type="text">
+        </div>
+        <div class="input-box">
+            <input class="form-control mx-auto w-auto" id="order_name" name="order_name" placeholder="Order name" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add order</button>
+    </form>
+</div>
+</body>
+</html>
